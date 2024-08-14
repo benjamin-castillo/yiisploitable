@@ -47,6 +47,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
     <footer id="footer" class="mt-auto py-3 bg-light">
         <div class="container">
+            <?php
+            $cookieValue = Yii::$app->request->cookies->getValue('mySelectValue', 1);
+            echo $this->render('_secure_level', ['cookieValue' => $cookieValue]);
+            ?>
             <div class="row text-muted">
                 <div class="col-md-6 text-center text-md-start">&copy; Hackme <?= date('Y') ?></div>
                 <div class="col-md-6 text-center text-md-end">Mantenida por Benjamin Castillo Arriaga </div>
