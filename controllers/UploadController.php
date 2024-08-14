@@ -41,7 +41,10 @@ class UploadController extends Controller
 
                 // Aquí puedes agregar cualquier otra lógica necesaria
 
-                return $this->render('upload-success', ['filePath' => $filePath]);
+                return $this->render('upload-success', [
+                    'filePath' => $filePath,
+                    'securityLevel' => $securityLevel
+                ]);
             }
         }
 
