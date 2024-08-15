@@ -34,6 +34,7 @@ class CookieController extends Controller
         Yii::$app->response->cookies->add($cookie);
 
         // Redirigir de nuevo a la página principal
-        return $this->redirect(['/']);
+        //return $this->redirect(['/']);
+        return $this->redirect(Yii::$app->request->referrer);
     }
 }

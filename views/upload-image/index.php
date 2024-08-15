@@ -1,11 +1,22 @@
 <?php
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
-$this->title = 'Unsafe Upload Level ' . $securityLevel;
+$this->title = 'Upload Level ' . $securityLevel;
 $this->params['breadcrumbs'][] = $this->title;
+switch ($securityLevel) {
+    case 1:
+        $msg = "Upload any kind of file including images";
+        break;
+    case 2:
+        $msg = "Upload just images jpg or png, its more secure";
+        break;
+    default:
+        die("Module under construction plase visit https://github.com/benjamin-castillo/yiisploitable for more information");
+        break;
+}
 ?>
 <h1><?= Html::encode($this->title) ?></h1>
-<p>In this case exist a poor validation</p>
+<p><?= $msg ?></p>
 <?php $form = ActiveForm::begin([
     'options' => ['enctype' => 'multipart/form-data'] // Necesario para subir archivos
 ]) ?>

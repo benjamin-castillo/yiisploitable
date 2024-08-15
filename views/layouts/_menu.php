@@ -11,7 +11,8 @@ echo Nav::widget([
     'options' => ['class' => 'navbar-nav'],
     'items' => [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Upload', 'url' => ['/upload/index']],
+        ['label' => 'Upload Images', 'url' => ['/upload-image/index']],
+        ['label' => 'Upload Excel', 'url' => ['/upload-excel/index']],
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
         Yii::$app->user->isGuest

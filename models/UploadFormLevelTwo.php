@@ -4,7 +4,7 @@ namespace app\models;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
-class UploadFormLevelOne extends Model
+class UploadFormLevelTwo extends Model
 {
     /**
      * @var UploadedFile
@@ -18,7 +18,7 @@ class UploadFormLevelOne extends Model
                 ['file'],
                 'file',
                 'skipOnEmpty' => false,
-                //'extensions' => 'png, jpg' <-- This is unsafe Level 1
+                'extensions' => 'png, jpg' //Filter just images
             ],
         ];
     }
