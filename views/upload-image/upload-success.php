@@ -1,9 +1,9 @@
 <?php
 use yii\helpers\Html;
-$this->title = 'Unsafe Upload Level ' . $securityLevel;
+$this->title = '¡File upload success! Level ' . $securityLevel;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<p>¡File upload success!</p>
+<h1><?= Html::encode($this->title) ?></h1>
 <?php
 if (isset($ImageSmallPath)) {
     echo Html::a('See small file version', ['uploads/' . basename($ImageSmallPath)], ['target' => '_blank']);
