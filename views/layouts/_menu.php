@@ -14,17 +14,17 @@ echo Nav::widget([
         ['label' => 'Upload Images', 'url' => ['/upload-image/index']],
         ['label' => 'Upload Excel', 'url' => ['/upload-excel/index']],
         ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-        Yii::$app->user->isGuest
-        ? ['label' => 'Login', 'url' => ['/site/login']]
-        : '<li class="nav-item">'
-        . Html::beginForm(['/site/logout'])
-        . Html::submitButton(
-            'Logout (' . Yii::$app->user->identity->username . ')',
-            ['class' => 'nav-link btn btn-link logout']
-        )
-        . Html::endForm()
-        . '</li>'
+        // ['label' => 'Contact', 'url' => ['/site/contact']],
+        /* Yii::$app->user->isGuest
+        // ? ['label' => 'Login', 'url' => ['/site/login']]
+         : '<li class="nav-item">'
+         . Html::beginForm(['/site/logout'])
+         . Html::submitButton(
+             'Logout (' . Yii::$app->user->identity->username . ')',
+             ['class' => 'nav-link btn btn-link logout']
+         )
+         . Html::endForm()
+         . '</li>'*/
     ]
 ]);
 NavBar::end();

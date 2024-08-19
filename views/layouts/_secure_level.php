@@ -12,8 +12,7 @@ use yii\widgets\ActiveForm;
 
 <?= Html::dropDownList('selectValue', $cookieValue, [
     1 => 'Low security 1',
-    2 => 'Medium security 2',
-    3 => 'High Security 3',
+    2 => 'Medium security 2'
 ], ['class' => 'form-control']) ?>
 
 <div class="form-group" style="margin-top: 20px;">
